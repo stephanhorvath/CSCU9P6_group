@@ -49,7 +49,7 @@ public class Controller2 extends JFrame
         window.add(view3);
         view4 = new View4(this, model);
         window.add(view4);
-        
+     
         // Display the frame
         setVisible(true);
         
@@ -62,13 +62,15 @@ public class Controller2 extends JFrame
             view3.clear();
             view4.clear();
         }
+
         if (e.getSource() == incB) {
             model.modifyB();
         }
-        if (e.getSource() == refreshViews) {
-            view3.update();
-            view4.update();
-        }
+        
+//         if (e.getSource() == refreshViews) {
+//             view3.update();
+//             view4.update();
+//         }
         
     } // actionPerformed
     
