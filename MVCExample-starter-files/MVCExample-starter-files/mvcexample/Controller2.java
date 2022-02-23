@@ -19,15 +19,16 @@ public class Controller2 extends JFrame
     private JButton clearViews;   // For direct message to views
     // private JButton refreshViews; // To prompt them to refresh their contents from the model
     private JButton incB;
+    private String windowName;
     
     // Constructor
-    public Controller2(Model model) {
+    public Controller2(Model model, String windowName) {
     
         // Record reference to the model
         this.model = model;
         
         // Configure the window
-        setTitle("Controller2");
+        setTitle(windowName);
         setLocation(40,200);
         setSize(350,150);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
