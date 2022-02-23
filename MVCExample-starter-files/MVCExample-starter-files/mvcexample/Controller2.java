@@ -17,7 +17,7 @@ public class Controller2 extends JFrame
     private View3 view3;
     private View4 view4;
     private JButton clearViews;   // For direct message to views
-    private JButton refreshViews; // To prompt them to refresh their contents from the model
+    // private JButton refreshViews; // To prompt them to refresh their contents from the model
     private JButton incB;
     private String windowName;
     
@@ -42,15 +42,15 @@ public class Controller2 extends JFrame
         incB = new JButton("Increment B");
         window.add(incB);
         incB.addActionListener(this);
-        refreshViews = new JButton("Refresh views");
-        window.add(refreshViews);
-        refreshViews.addActionListener(this);
+        // refreshViews = new JButton("Refresh views");
+        // window.add(refreshViews);
+        // refreshViews.addActionListener(this);
         // Create views
         view3 = new View3(this, model);
         window.add(view3);
         view4 = new View4(this, model);
         window.add(view4);
-        
+     
         // Display the frame
         setVisible(true);
         
@@ -63,13 +63,15 @@ public class Controller2 extends JFrame
             view3.clear();
             view4.clear();
         }
+
         if (e.getSource() == incB) {
             model.modifyB();
         }
-        if (e.getSource() == refreshViews) {
-            view3.update();
-            view4.update();
-        }
+        
+//         if (e.getSource() == refreshViews) {
+//             view3.update();
+//             view4.update();
+//         }
         
     } // actionPerformed
     
