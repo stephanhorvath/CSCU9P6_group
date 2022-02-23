@@ -22,15 +22,16 @@ public class Controller1 extends JFrame
     private JButton clearViews;  // For direct message to views
     private JButton incA;        // To prompt the model to "modify" itself (A component)
     private JButton quit;        // As it says
+    private String windowName;
     
     // Constructor
-    public Controller1(Model model) {
+    public Controller1(Model model, String windowName) {
         
         // Record reference to the model
         this.model = model;
         
         // Configure the window
-        setTitle("Controller1");
+        setTitle(windowName);
         setLocation(40,40);
         setSize(350,150);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
